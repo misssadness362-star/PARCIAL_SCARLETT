@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Iniciar Sesión</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f2f5;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .login-container h2 {
+        margin-bottom: 25px;
+        color: #ffffff;
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .input-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 1em;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .input-group input:focus {
+        border-color: #007bff;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff6ac6;
+        /* Color rosa de los botones */
+        color: #000000;
+        /* Color del texto del botón */
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+        background-color: #e656b2;
+    }
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .links-container a {
+        color: #ff6ac6;
+        text-decoration: none;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .links-container p {
+        margin: 0;
+        color: #e9e9e9;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .links-container .recovery-link {
+        font-size: 0.8em;
+        color: #ff6ac6;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <div class="input-group">
+            <input type="text" placeholder="Teléfono, usuario o correo electrónico" required>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Contraseña" required>
+        </div>
+        <button class="login-button">Entrar</button>
+        <div class="links-container">
+            <a href="#">¿Has olvidado la contraseña?</a>
+            <a href="#" class="recovery-link">Recuperar cuenta</a>
+            <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+        </div>
+    </div><br>
+    <br><footer class="container-footer">
+        <a href="../Kuromi_Scar_raw.html" class="btn btn-regresar">Regresar</a>
+    </footer>
+</body>
+
+</html>

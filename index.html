@@ -1,0 +1,568 @@
+
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Hours</title>
+    <link rel="stylesheet" href="CSS/style.css" /> <!--Css personalizado-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="img/Kuromi_logo.jpeg" alt="logo de kuromi" class="logo" />
+            <span class="brand-name">Kuromi mi</span>
+        </div>
+
+        <nav class="navbar-center">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">HOME</a></li>
+                <li><a href="#" onclick="showSection('fanfics')">Fanfics</a></li>
+                <li><a href="#" onclick="showSection('fanarts')">Fan arts</a></li>
+            </ul>
+        </nav>
+
+        <div class="navbar-right">
+            <div class="search-bar">
+                <input type="text" placeholder="BUSCAR" />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="../Pro_Scar/html/menu.html" class="icon"><i class="fas fa-bars"></i></a>
+            <a href="../Pro_Scar/html/perfil.html" class="icon"><i class="fas fa-user-circle"></i></a>
+            <a href="../Pro_Scar/html/donaciones.html" class="icon dollar-icon"><i class="fas fa-dollar-sign"></i></a>
+        </div>
+    </header>
+
+    <!--Decoraciones-->
+    <img src="img/175edd0b9f734c5cb35fb7e68134614c.png" alt="Kuromi decorativa" class="kuromi-deco">
+    <img src="img/4735fc231ba8218167f56a1d4e4fd22a.png" alt="Kuromi decorativa" class="deco-kuro">
+    <img src="img/7a2b4f9a6805006b1a4b9b93b314b627.png" alt="Kuromi decorativa" class="kuromidecora">
+    <img src="img/fccc99846bc0b9eba2c9ce5379722204.png" alt="Kuromi decorativa" class="KD">
+
+    <!-- HOME -->
+    <section id="home" class="page-section">
+        <main class="content">
+            <div class="background-overlay"></div>
+
+            <div class="main-card-container d-flex flex-column flex-lg-row">
+                <div class="video-column">
+                    <div class="video-responsive">
+                        <video class="video-player" autoplay muted loop playsinline>
+                            <source src="vid/videoplayback.mp4" type="video/mp4">
+                            Tu navegador no soporta el tag de video.
+                        </video>
+                    </div>
+                </div>
+
+
+                <div class="main-card-right">
+                    <h1 class="main-title">Kuromania</h1>
+                    <p class="main-date">1 de Noviembre</p>
+                    <p class="main-time">A las 6:30 p.m.</p>
+                    <p class="main-address">Evento de Kuromi, prepárense editores que este evento es para ustedes🎀</p>
+                </div>
+            </div>
+
+            <section class="bottom-cards-container">
+                <div class="card">
+                    <div class="card-number">01</div>
+                    <img src="img/Kuro_store.jpeg" alt="Kuro Store" class="card-img" />
+                    <div class="card-content" onclick="window.open('../PRO_SCAR/html/store.html', '_blank')"
+                        style="cursor: pointer;">
+                        <h3 class="card-title">KURO STORE</h3>
+                        <p class="card-description">Encuentra los mejores artículos de Kuromi y sus amigos 🖤.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="window.open('../Pro_Scar/html/chapters.html', '_blank')"
+                    style="cursor: pointer;">
+                    <div class="card-number">02</div>
+                    <img src="img/kuromi2.jpg" alt="Chapters" class="card-img" />
+                    <div class="card-content">
+                        <h3 class="card-title">CHAPTERS</h3>
+                        <p class="card-description">Serie de Kuromi completa, todas las plataformas aquí reunidas.</p>
+                        <h5>Aún trabajamos en el doblaje 🫂</h5>
+                    </div>
+                </div>
+
+                <div class="card" onclick="window.open('../Pro_Scar/html/eventos.html', '_blank')"
+                    style="cursor: pointer;">
+                    <div class="card-number">03</div>
+                    <img src="img/kuromi3.webp" alt="Eventos" class="card-img" />
+                    <div class="card-content">
+                        <h3 class="card-title">EVENTOS</h3>
+                        <p class="card-description">𓆩♡𓆪Del 15 al 20 de Septiembre en la ciudad de Barranquilla.𓆩♡𓆪
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <!-- FANFICS -->
+    <section id="fanfics" class="page-section d-none">
+        <div class="text-center">
+            <h1 class="main-title">Fanfics🎀</h1>
+            <p class="letra_color">Sección de historias creadas por fans 🎀</p>
+        </div>
+        <!--Fan Fics 1-->
+        <main class="d-flex flex-wrap justify-content-center gap-4 p-4">
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">01</div>
+                <img src="img/fanfic1.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">Lágrimas bajo la lluvia</h5>
+                    <p class="card-price">Autor: Scaruma</p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic1">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+            <!--Fan Fics 2-->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">02</div>
+                <img src="img/fanfic2.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">La receta de la amistad</h5>
+                    <p class="card-price">Autor: Scaruma </p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic2">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+            <!--Fan Fics 3-->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">03</div>
+                <img src="img/fanfic3.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">El espejo del Bosque Encantado</h5>
+                    <p class="card-price">Autor: Scaruma </p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic3">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+            <!--Fan Fics 4-->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">04</div>
+                <img src="img/fanfic4.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">La gran batalla de los sabores</h5>
+                    <p class="card-price">Autor: Scaruma </p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic4">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+            <!--Fan Fics 5-->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">05</div>
+                <img src="img/fanfic5.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">Sombras y olas al atardecer</h5>
+                    <p class="card-price">Autor: Scaruma </p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic5">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+            <!--Fan Fics 6-->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">06</div>
+                <img src="img/fanfic6.jpeg" class="card-img-top" alt="Image of Fan-Fic" />
+                <div class="card-body">
+                    <h5 class="card-title">La puerta de los sueños rebeldes</h5>
+                    <p class="card-price">Autor: Scaruma </p>
+                    <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalFanfic6">
+                        <i class="fa-solid fa-heart"></i> Leer Más
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+
+    <!-- FANARTS -->
+    <section id="fanarts" class="page-section d-none">
+        <center>
+            <h1 class="main-title">Fan Arts🎀</h1>
+            <p class="letra_color">Sección donde se verá el arte de los fans a este personaje tan querido y amado 🎀</p>
+        </center>
+        <main class="d-flex flex-wrap justify-content-center gap-4 p-4">
+            <!-- Tarjeta 1 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">01</div>
+                <img src="img/fan_art1.jpg" class="card-img-top" alt="Fan Art 1" />
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi: La colección gótica</h5>
+                    <p class="card-price">Artista: ariimaw</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/ariimaw/?g=5', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">02</div>
+                <div class="card-img-container"><img src="img/fan_art2.jpg" class="card-img" alt="Fan Art 2" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi y sus amigos</h5>
+                    <p class="card-price">Artista: scaruma</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/scaruma?igsh=MW14ODBzZXMyaHFhcA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">03</div>
+                <div class="card-img-container"><img src="img/fan_art3.png" class="card-img" alt="Fan Art 3" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">El lado tierno de Kuromi y My Melody</h5>
+                    <p class="card-price">Artista: tokisha</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/fanart.kuromi?igsh=MWFhZ2owMnozeXp3aQ==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">04</div>
+                <div class="card-img-container"><img src="img/fan_art4.jpg" class="card-img" alt="Fan Art 4" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Princesa gótica</h5>
+                    <p class="card-price">Artista: scaruma</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/scaruma?igsh=MW14ODBzZXMyaHFhcA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">05</div>
+                <div class="card-img-container"><img src="img/fan_art5.jpg" class="card-img" alt="Fan Art 5" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi relajada</h5>
+                    <p class="card-price">Artista: scaruma</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/scaruma?igsh=MW14ODBzZXMyaHFhcA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">06</div>
+                <div class="card-img-container"><img src="img/fan_art6.jpg" class="card-img" alt="Fan Art 6" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi estilo rebelde</h5>
+                    <p class="card-price">Artista: scaruma</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/scaruma?igsh=MW14ODBzZXMyaHFhcA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 7 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">07</div>
+                <div class="card-img-container"><img src="img/fan_art7.png" class="card-img" alt="Fan Art 7" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Duelo de la amistad</h5>
+                    <p class="card-price">Artista: ariimaw</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/ariimaw/?g=5', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 8 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">08</div>
+                <div class="card-img-container"><img src="img/fan_art8.png" class="card-img" alt="Fan Art 8" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Fondo de pantalla Kuromi</h5>
+                    <p class="card-price">Artista: spaicy_project</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/spaicy_project/?g=5', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 9 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">09</div>
+                <div class="card-img-container"><img src="img/fan_art9.jpeg" class="card-img" alt="Fan Art 9" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Amistad en el jardín</h5>
+                    <p class="card-price">Artista: junie_draws</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/junie_draws?igsh=bnB4ZzR5OTg5bmI4', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 10 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">10</div>
+                <div class="card-img-container"><img src="img/fan_art10.1.png" class="card-img" alt="Fan Art 10" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Mascota de Kuromi</h5>
+                    <p class="card-price">Artista: alyxianix.oldaccount</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/alyxianix.oldaccount?igsh=NWI4eGx2NTYzbnhr', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 11 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">11</div>
+                <div class="card-img-container"><img src="img/fan_art11.png" class="card-img" alt="Fan Art 11" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi de ensueño</h5>
+                    <p class="card-price">Artista: miso.art</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('Fan art 11: https://www.instagram.com/miso.art?igsh=MWR5YzJpOWpoaGw3aA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 12 -->
+            <div class="product-card" style="width: 18rem;">
+                <div class="product-number">12</div>
+                <div class="card-img-container"><img src="img/fan_art12.jpg" class="card-img" alt="Fan Art 12" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">Kuromi y su reflejo</h5>
+                    <p class="card-price">Artista: scaruma</p>
+                    <button class="btn-comprar"
+                        onclick="window.open('https://www.instagram.com/scaruma?igsh=MW14ODBzZXMyaHFhcA==', '_blank')">
+                        <i class="fas fa-heart"></i> Ver Más
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/Kuromi_logo.jpeg" alt="Logo Kuromi" class="footer-logo" />
+                <span class="footer-brand-name">Fans de Kuromi</span>
+            </div>
+
+            <div class="footer-links">
+                <a href="../Pro_Scar/html/sobre_nosotros.html">Sobre Nosotros</a>
+                <a href="../Pro_Scar/html/contacto.html">Contacto</a>
+                <a href="../Pro_Scar/html/terminos.html">Términos</a>
+                <a href="../Pro_Scar/html/privacidad.html">Privacidad</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/kuromi_project?igsh=MXg0aGoyNW0xcHRlbg==" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kuromi_project" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/groups/1259197435827696/?ref=share&mibextid=NSMWBT" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@HelloKittyandFriends/videos" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fans de Kuromi. Todos los derechos reservados 🎀</p>
+        </div>
+    </footer>
+
+    <!--Modal Fan-Fic 1-->
+    <div class="modal fade" id="modalFanfic1" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">Lágrimas bajo la lluvia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Kuromi se sentó en el borde de su cama, abrazando su cojín favorito mientras la lluvia golpeaba contra la ventana. Nadie lo sabía, pero detrás de su carácter rebelde había un corazón que también sufría. Esa noche recordó a una amiga que había partido, alguien que siempre la entendía y reía de sus bromas. El silencio era pesado, y sus pensamientos más fuertes que cualquier grito. Una lágrima cayó sobre su diario abierto. Aunque la tristeza la envolvía, sabía que ese dolor era también un reflejo del amor verdadero que había sentido.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Modal Fan-Fic 2-->
+    <div class="modal fade" id="modalFanfic2" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">La receta de la amistad”</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Un día soleado, Kuromi decidió salir a pasear por el campo. Allí se encontró con My Melody, que la invitó a preparar galletas en su casa. Al principio Kuromi lo vio como algo aburrido, pero pronto se encontró cubierta de harina, riendo como nunca mientras My Melody intentaba mantener el orden. El aroma de las galletas llenó la cocina y, cuando al fin probaron la primera, ambas estallaron en carcajadas: habían quedado horribles, pero deliciosamente divertidas. Kuromi pensó: “La vida sabe mejor cuando se comparte”.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Modal Fan-Fic 3-->
+    <div class="modal fade" id="modalFanfic3" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">El espejo del Bosque Encantado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Cansada de lo cotidiano, Kuromi tomó un mapa viejo y se lanzó al Bosque Encantado. Allí enfrentó riachuelos mágicos, plantas que hablaban y un grupo de duendes traviesos que intentaron engañarla. Con su ingenio y rebeldía, logró atravesar todos los obstáculos hasta llegar a un cofre dorado. Al abrirlo, no encontró joyas, sino un espejo mágico. En él se reflejaba no su apariencia, sino su valentía, sus miedos y sus sueños. Kuromi comprendió que su aventura más grande no era hacia afuera, sino hacia dentro de sí misma.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Modal Fan-Fic 4-->
+    <div class="modal fade" id="modalFanfic4" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">La gran batalla de los sabores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ese día, Kuromi participó en un concurso de comida de la ciudad. Pensaba que sería fácil ganar, pero se encontró con montañas de ramen, curry picante y pasteles interminables. Plato tras plato, se lanzó con toda su energía, mientras el público la animaba. Aunque terminó exhausta y con la panza a punto de estallar, su sonrisa era enorme. No ganó el trofeo, pero todos coincidieron en que había ganado el corazón del público. Al levantarse, exclamó orgullosa: “¡Que tiemblen, porque Kuromi nunca se rinde ni en la mesa!”.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Modal Fan-Fic 5-->
+    <div class="modal fade" id="modalFanfic5" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">Sombras y olas al atardecer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El sol brillaba con fuerza, y Kuromi, equipada con un flotador en forma de calavera y unas gafas negras, corrió hacia el mar. Chapoteó entre las olas, construyó castillos extravagantes en la arena y persiguió a las gaviotas que rondaban sus cosas. Más tarde, mientras el cielo se teñía de naranja en el atardecer, se sentó en la arena húmeda y suspiró. Ese día había sido perfecto, lleno de risas y tranquilidad. “La playa también puede ser mi reino rebelde”, pensó con una sonrisa satisfecha.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!--Modal Fan-Fic 6-->
+    <div class="modal fade" id="modalFanfic6" tabindex="-1" aria-labelledby="modalFanfic1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFanfic1Label">La puerta de los sueños rebeldes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Una noche, mientras la luna iluminaba su habitación, Kuromi descubrió una puerta secreta tras su armario. Al cruzarla, apareció en un bosque lleno de flores luminosas y mariposas de cristal que revoloteaban en el aire. Caminó entre ríos brillantes y árboles que susurraban canciones antiguas. Allí todo lo que imaginaba cobraba vida: coronas de estrellas, dragones amistosos y caminos que flotaban en el aire. Riendo y jugando como una niña, Kuromi comprendió que ese lugar era su propio refugio, un mundo hecho de su rebeldía y su magia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS sin integrity para desarrollo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.classList.add('d-none');
+            });
+
+            // Mostrar la sección seleccionada
+            const section = document.getElementById(sectionId);
+            section.classList.remove('d-none');
+
+            // Actualizar la clase "active" del menú
+            document.querySelectorAll('.navbar-center a').forEach(link => {
+                link.classList.remove('active');
+            });
+            // Activar el link clicado
+            const activeLink = Array.from(document.querySelectorAll('.navbar-center a'))
+                .find(a => a.getAttribute('onclick')?.includes(sectionId));
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Reiniciar el carrusel si es fanarts
+            if (sectionId === 'fanarts') {
+                const carouselElement = document.querySelector('#carouselExampleIndicators');
+                if (carouselElement) {
+                    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+                    carousel.to(0);
+                }
+            }
+        }
+
+        // Mostrar "home" por defecto al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+        if (window.bootstrap && bootstrap.Carousel) {
+            const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+            carousel.to(0);
+        }
+
+    </script>
+</body>
+
+</html>

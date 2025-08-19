@@ -1,0 +1,111 @@
+/* Estilo general del cuerpo */
+body {
+  background-image: linear-gradient(145deg, rgba(42, 10, 74, 0.7) 0%, rgba(0, 0, 0, 0.7) 74%), url('../img/EventosORfondo.jpeg');
+  background-color: #2a0a4a;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título principal */
+.main-title {
+  color: #ff89e9;
+  /* Rosa/Fucsia para el título */
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Estilo base para los botones de evento */
+.btn-evento {
+  background-color: #ff89e9;
+  /* Color fucsia */
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.btn-evento:hover {
+  background-color: #ffffff;
+  color: #ff89e9;
+  transform: scale(1.05);
+  /* Ligeramente más grande */
+  box-shadow: 0px 0px 15px #ff89e9;
+}
+
+/* Estilo para el botón destacado (nuevo, importante, etc.) */
+.btn-destacado {
+  background-color: #f73ab6;
+  /* Un rosa más intenso */
+  border-color: #fff;
+  animation: pulse 2s infinite;
+  /* Animación para llamar la atención */
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* Estilo para el botón de regresar */
+.container-footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-regresar {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #ff89e9;
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+  background-color: #ff89e9;
+  color: #000;
+}
+
+
+/* Estilos personalizados para los Modales */
+.modal-content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/EventosORfondo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #ff89e9;
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ff89e9;
+}
+
+.modal-title {
+  color: #ff89e9;
+  font-weight: bold;
+}

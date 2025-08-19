@@ -1,0 +1,170 @@
+/* Estilo general del cuerpo, similar a la página de eventos */
+body {
+    background-image: linear-gradient(145deg, rgba(42, 10, 74, 0.7) 0%, rgba(0, 0, 0, 0.7) 74%), url('../img/KUROSTOREFONDO.jpeg');
+    background-color: #2a0a4a; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-title {
+    color: #ff89e9;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.product-card {
+    background-color: #ffffff;
+    color: #2a0a4a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ff89e9;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #2a0a4a;
+    font-weight: bold;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    color: #ff89e9;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-comprar {
+    background-color: #ff89e9;
+    color: #2a0a4a;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #f73ab6;
+    color: #ffffff;
+}
+
+.btn-comprar i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilo para el botón de regresar (corregido) */
+.container-footer {
+    position: relative;
+    padding-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-regresar {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #ff89e9;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #ff89e9;
+    color: #000;
+}
+
+/* Contenedor de la alerta (único y optimizado) */
+/* Estilos para la ventana emergente (modal) */
+/* Contenedor principal. Oculto por defecto. */
+.custom-alert-container {
+    display: none; /* Se cambia a 'flex' con JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Clase para mostrar la animación */
+.custom-alert-container.show {
+    opacity: 1;
+}
+
+/* Contenido de la alerta (la caja blanca/negra) */
+.custom-alert-content {
+    background-color: #150030; /* Fondo morado oscuro */
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 400px;
+    border: 2px solid #ff6ac6; /* Borde rosa */
+}
+
+/* Estilo del icono (el carrito de compras) */
+.alert-icon {
+    font-size: 2em;
+    color: #ff6ac6; /* Color de acento rosa */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo del mensaje de texto */
+#alert-message {
+    color: #e9e9e9; /* Color de texto claro */
+    font-size: 1.2em;
+    /* Asegúrate de importar la fuente que quieras aquí, por ejemplo: */
+    /* font-family: 'Lato', sans-serif; */
+    margin: 0;
+}
+
+/* Botón de cierre (la "x") */
+.custom-alert-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #ff6ac6; /* Color de acento rosa */
+}

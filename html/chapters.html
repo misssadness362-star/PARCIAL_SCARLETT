@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/chapter.css" /> <!---css personalizado-->
+  <title>Temporadas y capítulos de Kuromi 🎀</title>
+</head>
+
+<body>
+  <div class="content">
+    <h1 class="main-title">🖤 Temporadas y capítulos donde aparece Kuromi 🎀</h1>
+
+    <div class="accordion" id="accordionKuromi">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+            aria-expanded="true" aria-controls="collapse1">
+            Temporada 1 - Capítulos 1 al 52
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+          data-bs-parent="#accordionKuromi">
+          <div class="accordion-body" id="season1"></div>
+        </div>
+      </div><br>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+            aria-expanded="false" aria-controls="collapse2">
+            Temporada 2 - Capítulos 53 al 104
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+          data-bs-parent="#accordionKuromi">
+          <div class="accordion-body" id="season2"></div>
+        </div>
+      </div><br>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+            aria-expanded="false" aria-controls="collapse3">
+            Temporada 3 - Capítulos 105 al 156
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+          data-bs-parent="#accordionKuromi">
+          <div class="accordion-body" id="season3"></div>
+        </div>
+      </div><br>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+            aria-expanded="false" aria-controls="collapse4">
+            Temporada 4 - Capítulos 157 al 208
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+          data-bs-parent="#accordionKuromi">
+          <div class="accordion-body" id="season4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="video-popup" class="popup-container">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-footer">
+    <a href="../Kuromi_Scar_raw.html" class="btn btn-regresar">Regresar</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const videoLinks = [
+      'https://www.youtube.com/embed/3TKp9yCGBjQ?rel=0',
+      'https://www.youtube.com/embed/wLu0ufkJjX0?rel=0',
+      'https://www.youtube.com/embed/Oht1Z8aHNyA?rel=0',
+      'https://www.youtube.com/embed/kJtCbYWSliA?rel=0',
+      'https://www.youtube.com/embed/hEBXyNS4WL8?rel=0',
+      'https://www.youtube.com/embed/ALHn9PcFF-0?rel=0',
+      'https://www.youtube.com/embed/AdW-wIyn3tY?rel=0',
+      'https://www.youtube.com/embed/J1nRmi_fMx0?rel=0',
+      'https://www.youtube.com/embed/3JaomhzGsWQ?rel=0',
+      'https://www.youtube.com/embed/9Sot9QTuP6s?rel=0'
+    ];
+
+    function listarCapitulos(divId, inicio, fin) {
+      const contenedor = document.getElementById(divId);
+      let lista = '<ul>';
+      for (let i = inicio; i <= fin; i++) {
+        lista += `<li id="chapter-${i}">Capítulo ${i}</li>`;
+      }
+      lista += '</ul>';
+      contenedor.innerHTML = lista;
+    }
+
+    listarCapitulos('season1', 1, 52);
+    listarCapitulos('season2', 53, 104);
+    listarCapitulos('season3', 105, 156);
+    listarCapitulos('season4', 157, 208);
+
+    function agregarEnlacesATemporada(divId, inicio, cantidadEnlaces) {
+      const contenedor = document.getElementById(divId);
+      if (!contenedor) return;
+
+      for (let i = 0; i < cantidadEnlaces; i++) {
+        const chapterItem = contenedor.querySelector(`li#chapter-${inicio + i}`);
+        if (chapterItem) {
+          chapterItem.innerHTML = `<a href="${videoLinks[i]}" class="chapter-link">Capítulo ${inicio + i}</a>`;
+        }
+      }
+    }
+
+    agregarEnlacesATemporada('season1', 1, 10);
+    agregarEnlacesATemporada('season2', 53, 10);
+    agregarEnlacesATemporada('season3', 105, 10);
+    agregarEnlacesATemporada('season4', 157, 10);
+  </script>
+</body>
+
+</html>
